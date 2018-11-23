@@ -1,2 +1,53 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+def get_top100_list():
+    output_list = list()
+    url = "https://www.billboard.com/charts/hot-100"
+
+    import requests
+    from bs4 import BeautifulSoup
+    
+    try:
+        response = requests.get(url)   
+        if not response.status_code == 200:
+            print("HTTP error",response.status_code)
+        else:
+            try:
+                soup = BeautifulSoup(response.content,'lxml')
+            except:
+                print('something went wrong')
+    except:
+        print("Something went wrong with request.get")
+    
+   # all_songs = soup.find_all('span',class_='chart-list-item__title-text')
+    all_songs = soup.find_all('div',class_='chart-list-item__text chart-list-item__text--has-video')
+    
+    for song in all_songs:
+        song_name = song.find('span',class_='chart-list-item__title-text').get_text()
+        artist = song.find('div',class_='chart-list-item__artist').get_text()
+        try:
+            lyrics_link = song.find('div',class_='chart-list-item__lyrics').find('a').get('href')
+        except:
+            lyrics_link = 'no_link_for_the_lyrics_on_billboard'
+
+        if song_name:
+            try:
+                lyrics = get_lyrics(lyrics_link)
+            except:
+                lyrics = 'no_link_for_the_lyrics_on_billboard'
+            output_list.append((song_name,artist,lyrics))
+    
+    return output_list
+
+
+    def get_lyrics(lyrics_link):
+    import requests
+    from bs4 import BeautifulSoup 
+    page = requests.get(lyrics_link)
+    soup = BeautifulSoup(page.content,'lxml') 
+    
+    try:
+        lyrics = soup.find('div',class_='lyrics').find('p').get_text() 
+    except:
+        lyrics = '--'
+    
+    return lyrics
+    
