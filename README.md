@@ -22,6 +22,6 @@ From the pop-up songs, more detailed information can be presented for the chosen
  - See requirements.txt for all the Python packages needed.
  
 ## Run Instruction
- - Please tpye in a few words, phrases or sentences, whatever you can recall from the lyrics of the song you would like to search.
+ - Please type in a few words, phrases or sentences, whatever you can recall from the lyrics of the song you would like to search.
  - Remember that the song you search should be a latest popular song. Or you will get either no search result or a popular song that might not be the one you are looking for.
  
