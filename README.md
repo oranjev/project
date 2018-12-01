@@ -2,10 +2,10 @@
 #### Course: IEORE4501_001
 #### Group: CGTY
 
-### What is it?
+## What is it?
 Have you ever come up with the situation that you couldn’t get a tune out of your head but couldn’t remember the song’s name but only a few words from it’s lyrics? Here is a tool to help with that desperate situation. Lyric Searching Engine is designed to get the detailed information of songs with a few words from the lyrics. Other than song’s names and artists, you can get recommendation of a bunch of fancy activities related to the song you search.
 
-### Main Features
+## Main Features
 
 #### Proximity search of songs according to input lyrics:
 Input will be searched through the lyrics of the most up-to-date Top100 songs, and names of possible songs will be returned.
@@ -16,12 +16,12 @@ From the pop-up songs, more detailed information can be presented for the chosen
 * Albums: Demonstrate information of all albums of the artist.
 * Song Recommendation: Recommend a song similar in content and display its sentiment (joy, anticipation, sadness or fear).
 
-### Installation Instruction
+## Installation Instruction
 
  - Download NRC-emotion-lexicon-wordlevel-alphabetized-v0.92.txt to the same file with the Lyric Searching Engining.
  - See requirements.txt for all the Python packages needed.
  
-### Run Instruction
+## Run Instruction
  - Please tpye in a few words, phrases or sentences, whatever you can recall from the lyrics of the song you would like to search.
  - Remember that the song you search should be a latest popular song. Or you will get either no search result or a popular song that might not be the one you are looking for.
  
