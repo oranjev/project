@@ -1,4 +1,4 @@
-# Project: Lyric Searching & Recommending Engine
+# Project: Lyric Searching Engine
 #### Course: IEORE4501_001
 #### Group: CGTY
 
