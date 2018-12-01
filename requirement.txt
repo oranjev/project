@@ -1,0 +1,8 @@
+Python packages used:
+requests
+bs4
+re
+nltk
+gensim
+pandas
+webbrowser
