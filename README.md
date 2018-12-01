@@ -1,6 +1,6 @@
 # Project: Lyric Searching & Recommending Engine
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+### Course: IEORE4501_001
+### Group: CGTY
 
 Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
 
