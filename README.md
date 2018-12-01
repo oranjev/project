@@ -2,12 +2,8 @@
 ### Course: IEORE4501_001
 ### Group: CGTY
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
-
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
-
+# What is it?
+Have you ever come up with the situation that you couldn’t get a tune out of your head but couldn’t remember the song’s name but only a few words from it’s lyrics? Here is a tool to help with that desperate situation. Lyric Searching Engine is designed to get the detailed information of songs with a few words from the lyrics. Other than song’s names and artists, you can get recommendation of a bunch of fancy activities related to the song you search.
 # New Features!
 
   - Import a HTML file and watch it magically convert to Markdown
