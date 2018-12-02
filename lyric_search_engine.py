@@ -724,39 +724,19 @@ def get_info_main_menu(song,name,lyric,lyric_list,lyric_dict):
 
 
 def run_all():
-     # for the first time searching
-    try:
-        search_string = str(input('Please enter a lyric string: '))
-        print('Searching for the first time. May take around 1 minute, please be patient...')
-        print()
-        list_of_songs = get_top100_list()
-        songs_with_lyrics = get_all_info(list_of_songs)
-        song_lyrics_dict = get_song_lyrics(songs_with_lyrics)
-        song, singer, lyric = find_song_based_on_search(list_of_songs,songs_with_lyrics,song_lyrics_dict,search_string,first_time=True)
-        if song:
-            get_info_main_menu(song,singer,lyric,songs_with_lyrics,song_lyrics_dict)
-        while True:
-            answer = str(input('Do you want to search for another lyric string? [y/n] '))
-            if answer.lower() == 'y' or answer.lower() == 'n':
-                break
-            else:
-                print('Wrong input! Try again.')
-                print()
-        if answer == 'n':
-            print()   
-            print('Bye-bye.')
+    # for the first time searching
+    while True:
+        try:
+            search_string = str(input('Please enter a lyric string: '))
+            print('Searching for the first time. May take around 1 minute, please be patient...')
             print()
-    except:
-        print('Please try again.')
-        print()
-        return None   
-       
-    # for searching after the first
-    try:
-        while True:
-            song, singer, lyric = find_song_based_on_search(list_of_songs,songs_with_lyrics,song_lyrics_dict)
+            list_of_songs = get_top100_list()
+            songs_with_lyrics = get_all_info(list_of_songs)
+            song_lyrics_dict = get_song_lyrics(songs_with_lyrics)
+            song, singer, lyric = find_song_based_on_search(list_of_songs, songs_with_lyrics, song_lyrics_dict,
+                                                            search_string, first_time=True)
             if song:
-                get_info_main_menu(song,singer,lyric,songs_with_lyrics,song_lyrics_dict)
+                get_info_main_menu(song, singer, lyric, songs_with_lyrics, song_lyrics_dict)
             while True:
                 answer = str(input('Do you want to search for another lyric string? [y/n] '))
                 if answer.lower() == 'y' or answer.lower() == 'n':
@@ -765,17 +745,38 @@ def run_all():
                     print('Wrong input! Try again.')
                     print()
             if answer == 'n':
-                print()   
+                print()
                 print('Bye-bye.')
                 print()
-                break
+                return None
+            break
+        except:
+            print('Please try again.')
+            print()
 
-        return None
-    except:
-        print('Please try again.')
-        print()
-        return None
-    
+    # for searching after the first
+    while True:
+        try:
+            while True:
+                song, singer, lyric = find_song_based_on_search(list_of_songs, songs_with_lyrics, song_lyrics_dict)
+                if song:
+                    get_info_main_menu(song, singer, lyric, songs_with_lyrics, song_lyrics_dict)
+                while True:
+                    answer = str(input('Do you want to search for another lyric string? [y/n] '))
+                    if answer.lower() == 'y' or answer.lower() == 'n':
+                        break
+                    else:
+                        print('Wrong input! Try again.')
+                        print()
+                if answer == 'n':
+                    print()
+                    print('Bye-bye.')
+                    print()
+                    return None
+        except:
+            print('Please try again.')
+            print()
+    return None
 
 
 # In[19]:
