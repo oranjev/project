@@ -17,11 +17,12 @@ From the pop-up songs, more detailed information can be presented for the chosen
 * Song Recommendation: Recommend a song similar in content and display its sentiment (joy, anticipation, sadness or fear).
 
 ## Installation Instruction
-
- - Download NRC-emotion-lexicon-wordlevel-alphabetized-v0.92.txt to the same file with the Lyric Searching Engining.
+ - As this program is written in Python 3, please make sure a proper version of Python has been installed.
+ - Download NRC-emotion-lexicon-wordlevel-alphabetized-v0.92.txt to the same file with the Lyric Searching Engine.
  - See requirements.txt for all the Python packages needed.
  
 ## Run Instruction
+ - Both py and ipynb file can finish the lyric searching task, you can choose whichever you like.
  - Please type in a few words, phrases or sentences, whatever you can recall from the lyrics of the song you would like to search.
  - Remember that the song you search should be a latest popular song. Or you will get either no search result or a popular song that might not be the one you are looking for.
  
