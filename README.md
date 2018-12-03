@@ -22,6 +22,7 @@ From the pop-up songs, more detailed information can be presented for the chosen
  - See requirements.txt for all the Python packages needed.
  
 ## Run Instruction
+ - Please make sure a stable Internet connection.
  - Both py and ipynb file can finish the lyric searching task, you can choose whichever you like.
  - For py, in the terminal, cd to the directory where you keep both 'NRC-emotion-lexicon-wordlevel-alphabetized-v0.92.txt' and 'lyric_search_engine.py', then run 'python lyric_search_engine.py'.
  - For ipynb, execute 'run all cells' in jupyter notebook, then go to the very last cell to follow the instructions. 
